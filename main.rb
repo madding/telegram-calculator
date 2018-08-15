@@ -14,6 +14,8 @@ keyboard = [
 end
 markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: keyboard)
 
+puts 'Before starting bot'
+
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
     case message
